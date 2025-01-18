@@ -1,0 +1,267 @@
+[
+  {
+    "question": "¿Cuál es la película más taquillera de todos los tiempos?",
+    "answers": [
+      "Avatar",
+      "Titanic",
+      "Avengers: Endgame",
+      "Star Wars: El despertar de la fuerza"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Quién dirigió 'El Padrino'?",
+    "answers": [
+      "Martin Scorsese",
+      "Francis Ford Coppola",
+      "Steven Spielberg",
+      "George Lucas"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Quién protagoniza 'Iron Man'?",
+    "answers": [
+      "Chris Hemsworth",
+      "Mark Ruffalo",
+      "Robert Downey Jr.",
+      "Chris Evans"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿En qué año se estrenó 'Jurassic Park'?",
+    "answers": ["1990", "1993", "1995", "1997"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el nombre del hobbit protagonista en 'El Señor de los Anillos'?",
+    "answers": [
+      "Bilbo Baggins",
+      "Frodo Baggins",
+      "Samwise Gamgee",
+      "Peregrin Took"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Quién es el director de 'Inception'?",
+    "answers": [
+      "James Cameron",
+      "Steven Spielberg",
+      "Christopher Nolan",
+      "Quentin Tarantino"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es la película más antigua de Disney?",
+    "answers": [
+      "Blancanieves y los siete enanitos",
+      "Cenicienta",
+      "La Bella Durmiente",
+      "Pinocho"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Qué actriz protagoniza 'Tomb Raider'?",
+    "answers": [
+      "Angelina Jolie",
+      "Scarlett Johansson",
+      "Alicia Vikander",
+      "Mila Kunis"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Quién escribió el libro en el que se basa 'Blade Runner'?",
+    "answers": [
+      "Isaac Asimov",
+      "Arthur C. Clarke",
+      "Philip K. Dick",
+      "Ray Bradbury"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Quién es el protagonista de 'Terminator'?",
+    "answers": [
+      "Sylvester Stallone",
+      "Arnold Schwarzenegger",
+      "Bruce Willis",
+      "Jean-Claude Van Damme"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Qué película ganó el Oscar a la Mejor Película en 2020?",
+    "answers": ["1917", "Once Upon a Time in Hollywood", "Joker", "Parasite"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "¿Cuál es el nombre de la nave en 'Alien'?",
+    "answers": ["Nostromo", "Sulaco", "Narcissus", "Prometheus"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Quién es el villano en 'The Dark Knight'?",
+    "answers": ["Bane", "The Joker", "Two-Face", "The Riddler"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿En qué película aparece 'Hakuna Matata'?",
+    "answers": ["Aladdin", "The Lion King", "Tarzan", "Pocahontas"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Qué actor interpreta a Jack Sparrow?",
+    "answers": [
+      "Orlando Bloom",
+      "Geoffrey Rush",
+      "Johnny Depp",
+      "Keira Knightley"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es el nombre del protagonista en 'Avatar'?",
+    "answers": [
+      "Jake Sully",
+      "Neytiri",
+      "Colonel Quaritch",
+      "Dr. Grace Augustine"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Quién dirigió 'The Social Network'?",
+    "answers": [
+      "David Fincher",
+      "Aaron Sorkin",
+      "Christopher Nolan",
+      "Martin Scorsese"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Qué película tiene la famosa frase 'I'm the king of the world!'?",
+    "answers": ["Titanic", "The Lion King", "The Godfather", "Braveheart"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Quién interpreta a Neo en 'The Matrix'?",
+    "answers": [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Hugo Weaving",
+      "Carrie-Anne Moss"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿En qué ciudad se desarrolla 'La La Land'?",
+    "answers": ["Nueva York", "Chicago", "Los Ángeles", "San Francisco"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es el nombre del barco en 'Pirates of the Caribbean'?",
+    "answers": [
+      "The Black Pearl",
+      "The Flying Dutchman",
+      "Queen Anne's Revenge",
+      "The Interceptor"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Quién es el director de 'Schindler's List'?",
+    "answers": [
+      "Steven Spielberg",
+      "Stanley Kubrick",
+      "Francis Ford Coppola",
+      "Ridley Scott"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿En qué planeta crece Luke Skywalker?",
+    "answers": ["Hoth", "Endor", "Tatooine", "Naboo"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Cuál es el nombre del robot en 'Wall-E'?",
+    "answers": ["Eva", "R2-D2", "Wall-E", "C-3PO"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "¿Qué actor interpreta a Wolverine?",
+    "answers": [
+      "Hugh Jackman",
+      "Chris Hemsworth",
+      "Ryan Reynolds",
+      "Tom Hardy"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es la primera película de Pixar?",
+    "answers": ["Toy Story", "Monsters, Inc.", "Finding Nemo", "A Bug's Life"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Quién dirigió 'Pulp Fiction'?",
+    "answers": [
+      "Steven Spielberg",
+      "Quentin Tarantino",
+      "James Cameron",
+      "Martin Scorsese"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "¿Cuál es el nombre del superhéroe en 'Ant-Man'?",
+    "answers": ["Scott Lang", "Tony Stark", "Bruce Wayne", "Peter Parker"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Qué película popularizó la frase 'May the Force be with you'?",
+    "answers": [
+      "Star Wars",
+      "Star Trek",
+      "The Matrix",
+      "Guardians of the Galaxy"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Quién es el villano en 'Avengers: Infinity War'?",
+    "answers": ["Loki", "Ultron", "Red Skull", "Thanos"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "¿En qué ciudad se desarrolla 'Inception'?",
+    "answers": ["París", "Nueva York", "Tokio", "Los Ángeles"],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Cuál es el nombre del protagonista en 'The Revenant'?",
+    "answers": [
+      "Hugh Glass",
+      "Jeremiah Johnson",
+      "John Fitzgerald",
+      "Jim Bridger"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "question": "¿Qué película popularizó la frase 'Hasta la vista, baby'?",
+    "answers": [
+      "Total Recall",
+      "Predator",
+      "Terminator 2: Judgment Day",
+      "Commando"
+    ],
+    "correctAnswer": 2
+  }
+]
