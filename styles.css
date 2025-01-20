@@ -1,106 +1,112 @@
-/* General Styles */
+/* Estilo general */
 body {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background: url("assets/fondo.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: #f5a623;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100vh;
+  color: white;
 }
 
-/* Header */
-header {
-  margin: 20px 0;
+/* Encabezado */
+header h1 {
   text-align: center;
-}
-
-h1 {
+  margin: 20px 0;
   font-size: 2.5rem;
-  margin: 0;
-  color: #ffa07a; /* Rosa palo para el título */
 }
 
-/* Game Container */
-#game-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Logo */
 .center-logo {
   display: block;
-  margin: 20px auto;
+  margin: 0 auto 20px;
   max-width: 150px;
   height: auto;
 }
 
-#question-container {
-  background-color: #1c1c1c;
-  border: 5px solid #f5a623;
-  border-radius: 10px;
-  padding: 20px;
-  width: 80%;
-  max-width: 500px;
-  text-align: center;
-}
-
-#answers {
+/* Contenedor del juego */
+#game-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  margin: 0 auto;
 }
 
+/* Caja de preguntas y respuestas */
+#question-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid green; /* Cambiará dinámicamente según el temporizador */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  transition: border-color 0.3s ease;
+}
+
+#question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Botones de respuestas */
 button {
   background-color: #007bff;
-  color: #fff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
   padding: 10px;
+  margin: 5px 0;
+  width: 100%;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
   cursor: pointer;
-  display: flex;
-  align-items: center; /* Centra icono y texto */
-  justify-content: space-between; /* Espacia texto e icono */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-/* Imágenes de estado */
+/* Contenedor de respuestas */
+#answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Íconos de respuesta */
 .answer-icon {
   width: 20px;
   height: 20px;
-  margin-left: 15px; /* Mayor separación del texto */
+  margin-left: 10px;
   vertical-align: middle;
-  display: none;
 }
 
-/* Stats */
+/* Estadísticas */
 #stats {
-  margin-top: 20px;
-  color: #f5a623;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
 }
 
 /* Footer */
 footer {
-  margin-top: 20px;
   text-align: center;
+  margin-top: 20px;
 }
 
 footer p {
-  font-size: 0.9rem;
-  color: #ffa07a; /* Rosa palo para el footer */
+  margin: 10px 0;
+  font-size: 0.8rem;
 }
 
 footer a {
-  color: #ffa07a;
+  color: lightblue;
   text-decoration: none;
 }
 

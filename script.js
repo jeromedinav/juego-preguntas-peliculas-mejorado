@@ -59,7 +59,7 @@ function checkAnswer(button, selected, correct) {
 
   setTimeout(() => {
     showNextQuestion();
-  }, 1000); // Desaparece después de 1 segundo
+  }, 1000);
 }
 
 // Iniciar el temporizador
