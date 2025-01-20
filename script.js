@@ -1,69 +1,103 @@
-// script.js
+// Variables globales
+let questions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+let timeLeft = 30;
+let timerInterval;
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  console.log("Document loaded");
-
-  console.log("Script cargado correctamente");
-
-  let questions = [];
-  let currentQuestionIndex = 0;
-  let score = 0;
-
+// Cargar preguntas desde el JSON
+function loadQuestions() {
   fetch("questions.json")
-    .then((response) => {
-      console.log("Fetch response:", response);
-      if (!response.ok) {
-        throw new Error("Error al cargar el archivo JSON");
-      }
-      return response.json();
-    })
+    .then((response) => response.json())
     .then((data) => {
-      console.log("JSON cargado correctamente:", data);
       questions = data;
       showNextQuestion();
     })
-    .catch((error) => console.error("Error:", error));
+    .catch((error) => console.error("Error al cargar las preguntas:", error));
+}
 
-  function showNextQuestion() {
-    console.log("Mostrando la pregunta número", currentQuestionIndex);
-    if (currentQuestionIndex < questions.length) {
-      const questionData = questions[currentQuestionIndex];
-      document.getElementById("question").textContent = questionData.question;
-      const answersDiv = document.getElementById("answers");
-      answersDiv.innerHTML = "";
-      questionData.answers.forEach((answer, index) => {
-        const button = document.createElement("button");
-        button.textContent = answer;
-        button.onclick = () => {
-          console.log("Respuesta seleccionada:", index);
-          checkAnswer(index);
-        };
-        answersDiv.appendChild(button);
-      });
-      updateProgressBar();
-    } else {
-      console.log("Fin del cuestionario, puntuación final:", score);
-      document.getElementById(
-        "score"
-      ).textContent = `Puntuación final: ${score}`;
-    }
-  }
+// Mostrar la siguiente pregunta
+function showNextQuestion() {
+  if (currentQuestionIndex < questions.length) {
+    const questionData = questions[currentQuestionIndex];
+    document.getElementById("question").textContent = questionData.question;
 
-  function checkAnswer(selectedIndex) {
-    console.log("Verificando la respuesta seleccionada:", selectedIndex);
-    if (questions[currentQuestionIndex].correctAnswer === selectedIndex) {
-      console.log("Respuesta correcta");
-      score++;
-    } else {
-      console.log("Respuesta incorrecta");
-    }
+    const answersDiv = document.getElementById("answers");
+    answersDiv.innerHTML = "";
+
+    questionData.answers.forEach((answer) => {
+      const button = document.createElement("button");
+      button.textContent = answer;
+
+      const icon = document.createElement("img");
+      icon.classList.add("answer-icon");
+
+      button.appendChild(icon);
+
+      button.onclick = () => checkAnswer(button, answer, questionData.correct);
+      answersDiv.appendChild(button);
+    });
+
     currentQuestionIndex++;
-    showNextQuestion();
+    startTimer();
+  } else {
+    showScore();
   }
+}
 
-  function updateProgressBar() {
-    const progressBar = document.getElementById("progress-bar");
-    const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
-    progressBar.style.width = `${progress}%`;
+// Verificar la respuesta del usuario
+function checkAnswer(button, selected, correct) {
+  const icon = button.querySelector(".answer-icon");
+  if (selected === correct) {
+    score++;
+    document.getElementById("score").textContent = `Puntuación: ${score}`;
+    icon.src = "assets/check.svg";
+  } else {
+    icon.src = "assets/cross.svg";
   }
-});
+  icon.style.display = "inline-block";
+
+  setTimeout(() => {
+    showNextQuestion();
+  }, 1000); // Desaparece después de 1 segundo
+}
+
+// Iniciar el temporizador
+function startTimer() {
+  clearInterval(timerInterval);
+  timeLeft = 30;
+  document.getElementById(
+    "timer"
+  ).textContent = `Tiempo restante: ${timeLeft}s`;
+
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    document.getElementById(
+      "timer"
+    ).textContent = `Tiempo restante: ${timeLeft}s`;
+
+    const container = document.getElementById("question-container");
+    if (timeLeft > 20) {
+      container.style.borderColor = "green";
+    } else if (timeLeft > 10) {
+      container.style.borderColor = "orange";
+    } else {
+      container.style.borderColor = "red";
+    }
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      showNextQuestion();
+    }
+  }, 1000);
+}
+
+// Mostrar la puntuación final
+function showScore() {
+  document.getElementById(
+    "question-container"
+  ).innerHTML = `<h2>Tu puntuación final es ${score}</h2>`;
+}
+
+// Iniciar el juego
+loadQuestions();
