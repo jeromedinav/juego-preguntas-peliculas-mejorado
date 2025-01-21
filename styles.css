@@ -66,6 +66,20 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+button.correct-answer {
+  background-color: green;
+  color: white;
+  position: relative;
+}
+
+button.correct-answer .good-icon {
+  position: absolute;
+  left: 10px; /* Ajustar según sea necesario */
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
 button:hover {
   background-color: #0056b3;
   transform: scale(1.05);
@@ -78,7 +92,20 @@ button:hover {
   gap: 10px;
 }
 
+#answers button {
+  position: relative;
+  padding-right: 40px; /* Espacio para el ícono */
+}
+
 /* Íconos de respuesta */
+.answer-icon {
+  position: absolute;
+  right: 10px; /* Ajustar según sea necesario */
+  top: 50%;
+  transform: translateY(-50%);
+  display: none; /* Ocultar por defecto */
+}
+
 .answer-icon {
   width: 20px;
   height: 20px;
