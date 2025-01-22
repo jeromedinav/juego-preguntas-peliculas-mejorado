@@ -58,6 +58,12 @@ function checkAnswer(button, selected, correct) {
     icon.src = "assets/check.svg";
   } else {
     icon.src = "assets/cross.svg";
+    // Cambiar el color del botón de la respuesta correcta a verde
+    buttons.forEach((btn) => {
+      if (btn.textContent === correct) {
+        btn.classList.add("correct-answer");
+      }
+    });
   }
   icon.style.display = "inline-block";
 
