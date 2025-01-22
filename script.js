@@ -24,6 +24,9 @@ function showNextQuestion() {
   if (currentQuestionIndex < questions.length) {
     const questionData = questions[currentQuestionIndex];
     document.getElementById("question").textContent = questionData.question;
+    document.getElementById("question-number").textContent = `- ${
+      currentQuestionIndex + 1
+    } -`;
 
     const answersDiv = document.getElementById("answers");
     answersDiv.innerHTML = "";
@@ -57,7 +60,9 @@ function checkAnswer(button, selected, correct) {
   const icon = button.querySelector(".answer-icon");
   if (selected === correct) {
     score++;
-    document.getElementById("score").textContent = `Puntuación: ${score}`;
+    document.getElementById(
+      "score"
+    ).innerHTML = `Puntos: <span>${score}</span>`;
     icon.src = "assets/check.svg";
     handleCorrectAnswer();
   } else {
@@ -88,13 +93,13 @@ function startTimer() {
   timeLeft = 30;
   document.getElementById(
     "timer"
-  ).textContent = `Tiempo restante: ${timeLeft}s`;
+  ).innerHTML = `Tiempo: <span>${timeLeft}</span>`;
 
   timerInterval = setInterval(() => {
     timeLeft--;
     document.getElementById(
       "timer"
-    ).textContent = `Tiempo restante: ${timeLeft}s`;
+    ).innerHTML = `Tiempo: <span>${timeLeft}</span>`;
 
     const container = document.getElementById("question-container");
     if (timeLeft > 20) {

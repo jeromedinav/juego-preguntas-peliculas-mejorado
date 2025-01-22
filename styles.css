@@ -43,6 +43,8 @@ header h1 {
   width: 80%;
   max-width: 600px;
   transition: border-color 0.3s ease;
+  margin-top: 15px; /* Ajustar según sea necesario */
+  margin-bottom: 15px; /* Ajustar según sea necesario */
 }
 
 #question {
@@ -53,6 +55,14 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.question-number {
+  color: #ffa500; /* Color amarillo/naranja */
+  font-size: 1.5rem; /* Ajustar según sea necesario */
+  font-weight: bold;
+  margin-top: 15px; /* Ajustar según sea necesario */
+  margin-bottom: 10px;
 }
 
 /* Botones de respuestas */
@@ -126,6 +136,24 @@ button:hover {
   font-size: 0.9rem;
   min-height: 60px; /* Ajustar según la altura de la imagen good.svg */
   align-items: center; /* Centrar verticalmente los elementos */
+}
+
+#score {
+  font-weight: bold;
+}
+
+#score span {
+  color: #ffa500; /* Cambiar a amarillo/naranja */
+  font-size: 1.2rem; /* Ajustar según sea necesario */
+}
+
+#timer {
+  font-weight: bold;
+}
+
+#timer span {
+  color: #ffa500; /* Cambiar a amarillo/naranja */
+  font-size: 1.2rem; /* Ajustar según sea necesario */
 }
 
 /* Footer */
