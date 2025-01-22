@@ -124,6 +124,8 @@ button:hover {
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
+  min-height: 60px; /* Ajustar según la altura de la imagen good.svg */
+  align-items: center; /* Centrar verticalmente los elementos */
 }
 
 /* Footer */
