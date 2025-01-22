@@ -18,6 +18,9 @@ function loadQuestions() {
 
 // Mostrar la siguiente pregunta
 function showNextQuestion() {
+  // Ocultar la imagen good.svg
+  document.getElementById("good-image").style.display = "none";
+
   if (currentQuestionIndex < questions.length) {
     const questionData = questions[currentQuestionIndex];
     document.getElementById("question").textContent = questionData.question;
@@ -56,6 +59,7 @@ function checkAnswer(button, selected, correct) {
     score++;
     document.getElementById("score").textContent = `Puntuación: ${score}`;
     icon.src = "assets/check.svg";
+    handleCorrectAnswer();
   } else {
     icon.src = "assets/cross.svg";
     // Cambiar el color del botón de la respuesta correcta a verde
@@ -70,6 +74,12 @@ function checkAnswer(button, selected, correct) {
   setTimeout(() => {
     showNextQuestion();
   }, 1000);
+}
+
+function handleCorrectAnswer() {
+  // Mostrar la imagen good.svg
+  document.getElementById("good-image").style.display = "block";
+  // ...código existente para manejar la respuesta correcta...
 }
 
 // Iniciar el temporizador

@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Film Challenge</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      #good-image {
+        width: 60px; /* Ajustar el tamaño según sea necesario */
+        height: 60px; /* Ajustar el tamaño según sea necesario */
+        display: none; /* Ocultar por defecto */
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -22,6 +29,7 @@
         <div id="answers"></div>
         <div id="stats">
           <p id="score">Puntuación: 0</p>
+          <img id="good-image" src="assets/good.svg" alt="Good Image" />
           <p id="timer">Tiempo restante: 30s</p>
         </div>
       </div>
