@@ -128,6 +128,12 @@ button:hover {
   vertical-align: middle;
 }
 
+#good-image {
+  width: 60px; /* Ajustar el tamaño según sea necesario */
+  height: 60px; /* Ajustar el tamaño según sea necesario */
+  display: none; /* Ocultar por defecto */
+}
+
 /* Estadísticas */
 #stats {
   margin-top: 15px;
