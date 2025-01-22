@@ -47,6 +47,10 @@ function showNextQuestion() {
 
 // Verificar la respuesta del usuario
 function checkAnswer(button, selected, correct) {
+  // Deshabilitar todos los botones de respuesta
+  const buttons = document.querySelectorAll("#answers button");
+  buttons.forEach((btn) => (btn.disabled = true));
+
   const icon = button.querySelector(".answer-icon");
   if (selected === correct) {
     score++;
